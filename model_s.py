@@ -227,15 +227,15 @@ for x0,x1,color,label in regions_int:
         label,
         ha="center",
         va="center",
-        fontsize=8,
+        fontsize=12,
         color=color,
         fontweight="bold"
     )
 
 ax1.plot(r,T_int,color=C_temp,lw=2.2)
 
-ax1.set_xlabel(r"Radius [$R_\odot$]")
-ax1.set_ylabel("Temperature [K]",color=C_temp)
+ax1.set_xlabel(r"Radius [$R_\odot$]", fontsize=11)
+ax1.set_ylabel("Temperature [K]",color=C_temp, fontsize=11)
 ax1.set_yscale("log")
 
 ax1.tick_params(axis="y",labelcolor=C_temp,labelsize=9)
@@ -251,7 +251,7 @@ ax1b.plot(
     ls=(0,(6,2))
 )
 
-ax1b.set_ylabel(r"Density [g cm$^{-3}$]",color=C_rho)
+ax1b.set_ylabel(r"Density [g cm$^{-3}$]",color=C_rho, fontsize=11)
 ax1b.set_yscale("log")
 ax1b.tick_params(axis="y",labelcolor=C_rho,labelsize=9)
 
@@ -262,7 +262,7 @@ ax1b.yaxis.set_major_formatter(
 ax1.text(
     -0.12,1.03,"(a)",
     transform=ax1.transAxes,
-    fontsize=12,
+    fontsize=16,
     fontweight="bold"
 )
 
@@ -290,7 +290,7 @@ for x0,x1,color,label,vert in regions_atm:
         label,
         ha="center",
         va="center",
-        fontsize=8,
+        fontsize=12,
         color=color,
         rotation=90 if vert else 0,
         fontweight="bold"
@@ -298,8 +298,8 @@ for x0,x1,color,label,vert in regions_atm:
 
 ax2.plot(height,T_atm,color=C_temp,lw=2.2)
 
-ax2.set_xlabel("Height [km]")
-ax2.set_ylabel("Temperature [K]",color=C_temp)
+ax2.set_xlabel("Height [km]", fontsize=11)
+ax2.set_ylabel("Temperature [K]",color=C_temp, fontsize=11)
 
 ax2.set_yscale("log")
 ax2.set_ylim(ax2.get_ylim()[0], 1e5)
@@ -317,7 +317,7 @@ ax2b.plot(
     ls=(0,(6,2))
 )
 
-ax2b.set_ylabel(r"Density [g cm$^{-3}$]",color=C_rho)
+ax2b.set_ylabel(r"Density [g cm$^{-3}$]",color=C_rho, fontsize=11)
 ax2b.set_yscale("log")
 
 ax2b.tick_params(axis="y",labelcolor=C_rho,labelsize=9)
@@ -347,7 +347,7 @@ fig.legend(
     loc="lower center",
     ncol=2,
     bbox_to_anchor=(0.5,0.00),
-    fontsize=9.5,
+    fontsize=12,
     framealpha=0.95,
     edgecolor="#aaaaaa"
 )
